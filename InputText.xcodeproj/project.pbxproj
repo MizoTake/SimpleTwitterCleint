@@ -7,11 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		961948641D867C2900563A01 /* SendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961948631D867C2900563A01 /* SendViewController.swift */; };
+		961948691D867F6600563A01 /* TwitterClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961948681D867F6600563A01 /* TwitterClient.swift */; };
+		961EC3F61D830A9700AA7275 /* RxBlocking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 961EC3F21D830A9700AA7275 /* RxBlocking.framework */; };
+		961EC3F71D830A9700AA7275 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 961EC3F31D830A9700AA7275 /* RxCocoa.framework */; };
+		961EC3F81D830A9700AA7275 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 961EC3F41D830A9700AA7275 /* RxSwift.framework */; };
 		96E2C0611D8303D000D4186A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E2C0601D8303D000D4186A /* AppDelegate.swift */; };
-		96E2C0631D8303D000D4186A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E2C0621D8303D000D4186A /* ViewController.swift */; };
 		96E2C0661D8303D000D4186A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96E2C0641D8303D000D4186A /* Main.storyboard */; };
 		96E2C0681D8303D000D4186A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96E2C0671D8303D000D4186A /* Assets.xcassets */; };
-		96E2C06B1D8303D000D4186A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96E2C0691D8303D000D4186A /* LaunchScreen.storyboard */; };
 		96E2C0761D8303D000D4186A /* InputTextTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E2C0751D8303D000D4186A /* InputTextTests.swift */; };
 		96E2C0811D8303D000D4186A /* InputTextUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E2C0801D8303D000D4186A /* InputTextUITests.swift */; };
 /* End PBXBuildFile section */
@@ -34,12 +37,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		961948631D867C2900563A01 /* SendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SendViewController.swift; path = ViewController/SendViewController.swift; sourceTree = "<group>"; };
+		961948681D867F6600563A01 /* TwitterClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterClient.swift; sourceTree = "<group>"; };
+		961EC3F21D830A9700AA7275 /* RxBlocking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxBlocking.framework; path = Carthage/Build/iOS/RxBlocking.framework; sourceTree = "<group>"; };
+		961EC3F31D830A9700AA7275 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
+		961EC3F41D830A9700AA7275 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		96E2C05D1D8303D000D4186A /* InputText.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InputText.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96E2C0601D8303D000D4186A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		96E2C0621D8303D000D4186A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		96E2C0651D8303D000D4186A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		96E2C0671D8303D000D4186A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		96E2C06A1D8303D000D4186A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		96E2C06C1D8303D000D4186A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		96E2C0711D8303D000D4186A /* InputTextTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InputTextTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		96E2C0751D8303D000D4186A /* InputTextTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputTextTests.swift; sourceTree = "<group>"; };
@@ -54,6 +60,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				961EC3F61D830A9700AA7275 /* RxBlocking.framework in Frameworks */,
+				961EC3F71D830A9700AA7275 /* RxCocoa.framework in Frameworks */,
+				961EC3F81D830A9700AA7275 /* RxSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +83,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		961948651D867C3C00563A01 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				961948631D867C2900563A01 /* SendViewController.swift */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		961948661D867C4900563A01 /* framework */ = {
+			isa = PBXGroup;
+			children = (
+				961EC3F31D830A9700AA7275 /* RxCocoa.framework */,
+				961EC3F41D830A9700AA7275 /* RxSwift.framework */,
+				961EC3F21D830A9700AA7275 /* RxBlocking.framework */,
+			);
+			name = framework;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		961948671D867F3E00563A01 /* SNS */ = {
+			isa = PBXGroup;
+			children = (
+				961948681D867F6600563A01 /* TwitterClient.swift */,
+			);
+			path = SNS;
+			sourceTree = "<group>";
+		};
 		96E2C0541D8303D000D4186A = {
 			isa = PBXGroup;
 			children = (
@@ -98,11 +134,12 @@
 			isa = PBXGroup;
 			children = (
 				96E2C0601D8303D000D4186A /* AppDelegate.swift */,
-				96E2C0621D8303D000D4186A /* ViewController.swift */,
 				96E2C0641D8303D000D4186A /* Main.storyboard */,
+				961948651D867C3C00563A01 /* ViewController */,
+				961948671D867F3E00563A01 /* SNS */,
 				96E2C0671D8303D000D4186A /* Assets.xcassets */,
-				96E2C0691D8303D000D4186A /* LaunchScreen.storyboard */,
 				96E2C06C1D8303D000D4186A /* Info.plist */,
+				961948661D867C4900563A01 /* framework */,
 			);
 			path = InputText;
 			sourceTree = "<group>";
@@ -135,6 +172,7 @@
 				96E2C0591D8303D000D4186A /* Sources */,
 				96E2C05A1D8303D000D4186A /* Frameworks */,
 				96E2C05B1D8303D000D4186A /* Resources */,
+				961EC3FA1D830ABF00AA7275 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -193,6 +231,7 @@
 				TargetAttributes = {
 					96E2C05C1D8303D000D4186A = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = YVYFZA6A8E;
 					};
 					96E2C0701D8303D000D4186A = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -229,7 +268,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				96E2C06B1D8303D000D4186A /* LaunchScreen.storyboard in Resources */,
 				96E2C0681D8303D000D4186A /* Assets.xcassets in Resources */,
 				96E2C0661D8303D000D4186A /* Main.storyboard in Resources */,
 			);
@@ -251,12 +289,32 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		961EC3FA1D830ABF00AA7275 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/RxBlocking.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		96E2C0591D8303D000D4186A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				96E2C0631D8303D000D4186A /* ViewController.swift in Sources */,
+				961948641D867C2900563A01 /* SendViewController.swift in Sources */,
+				961948691D867F6600563A01 /* TwitterClient.swift in Sources */,
 				96E2C0611D8303D000D4186A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -299,14 +357,6 @@
 				96E2C0651D8303D000D4186A /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		96E2C0691D8303D000D4186A /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				96E2C06A1D8303D000D4186A /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -401,6 +451,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = InputText/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.FIT.InputText;
@@ -412,6 +467,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = InputText/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.FIT.InputText;
@@ -423,6 +483,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = InputTextTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.FIT.InputTextTests;
@@ -435,6 +499,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = InputTextTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.FIT.InputTextTests;
@@ -446,6 +514,10 @@
 		96E2C08C1D8303D000D4186A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = InputTextUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.FIT.InputTextUITests;
@@ -457,6 +529,10 @@
 		96E2C08D1D8303D000D4186A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = InputTextUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.FIT.InputTextUITests;
@@ -484,6 +560,7 @@
 				96E2C0871D8303D000D4186A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		96E2C0881D8303D000D4186A /* Build configuration list for PBXNativeTarget "InputTextTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +569,7 @@
 				96E2C08A1D8303D000D4186A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		96E2C08B1D8303D000D4186A /* Build configuration list for PBXNativeTarget "InputTextUITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +578,7 @@
 				96E2C08D1D8303D000D4186A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
