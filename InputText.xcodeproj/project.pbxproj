@@ -18,6 +18,9 @@
 		961EC3F71D830A9700AA7275 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 961EC3F31D830A9700AA7275 /* RxCocoa.framework */; };
 		961EC3F81D830A9700AA7275 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 961EC3F41D830A9700AA7275 /* RxSwift.framework */; };
 		9648F6CF1D8716F200E8DC09 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9648F6CE1D8716F200E8DC09 /* Main.storyboard */; };
+		9648F6D21D87185F00E8DC09 /* TimelineViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9648F6D11D87185F00E8DC09 /* TimelineViewModel.swift */; };
+		9648F6D41D87194C00E8DC09 /* TimelineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9648F6D31D87194C00E8DC09 /* TimelineCell.swift */; };
+		9648F6D71D871CF100E8DC09 /* TimelineEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9648F6D61D871CF100E8DC09 /* TimelineEntity.swift */; };
 		96E2C0611D8303D000D4186A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E2C0601D8303D000D4186A /* AppDelegate.swift */; };
 		96E2C0681D8303D000D4186A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96E2C0671D8303D000D4186A /* Assets.xcassets */; };
 		96E2C0761D8303D000D4186A /* InputTextTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E2C0751D8303D000D4186A /* InputTextTests.swift */; };
@@ -53,6 +56,9 @@
 		961EC3F31D830A9700AA7275 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
 		961EC3F41D830A9700AA7275 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		9648F6CE1D8716F200E8DC09 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		9648F6D11D87185F00E8DC09 /* TimelineViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineViewModel.swift; sourceTree = "<group>"; };
+		9648F6D31D87194C00E8DC09 /* TimelineCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineCell.swift; sourceTree = "<group>"; };
+		9648F6D61D871CF100E8DC09 /* TimelineEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineEntity.swift; sourceTree = "<group>"; };
 		96E2C05D1D8303D000D4186A /* InputText.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InputText.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96E2C0601D8303D000D4186A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		96E2C0671D8303D000D4186A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -143,8 +149,25 @@
 		961948781D8715F900563A01 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				9648F6D11D87185F00E8DC09 /* TimelineViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		9648F6D01D87184900E8DC09 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9648F6D31D87194C00E8DC09 /* TimelineCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9648F6D51D871CD500E8DC09 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				9648F6D61D871CF100E8DC09 /* TimelineEntity.swift */,
+			);
+			path = Entity;
 			sourceTree = "<group>";
 		};
 		96E2C0541D8303D000D4186A = {
@@ -170,12 +193,14 @@
 		96E2C05F1D8303D000D4186A /* InputText */ = {
 			isa = PBXGroup;
 			children = (
-				961948781D8715F900563A01 /* ViewModel */,
 				96E2C0601D8303D000D4186A /* AppDelegate.swift */,
 				9648F6CE1D8716F200E8DC09 /* Main.storyboard */,
 				961948651D867C3C00563A01 /* ViewController */,
+				9648F6D01D87184900E8DC09 /* View */,
+				961948781D8715F900563A01 /* ViewModel */,
 				961948671D867F3E00563A01 /* SNS */,
 				9619486D1D86BECA00563A01 /* Request */,
+				9648F6D51D871CD500E8DC09 /* Entity */,
 				9619486A1D868B5800563A01 /* Other */,
 				96E2C0671D8303D000D4186A /* Assets.xcassets */,
 				96E2C06C1D8303D000D4186A /* Info.plist */,
@@ -355,10 +380,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				9619486F1D86F84B00563A01 /* TwitterGetRequest.swift in Sources */,
+				9648F6D71D871CF100E8DC09 /* TimelineEntity.swift in Sources */,
 				961948751D8706B800563A01 /* TwitterGetResponse.swift in Sources */,
 				9619486C1D868B9D00563A01 /* AlertDialog.swift in Sources */,
 				961948641D867C2900563A01 /* SendViewController.swift in Sources */,
 				961948771D87159700563A01 /* TimelineViewController.swift in Sources */,
+				9648F6D21D87185F00E8DC09 /* TimelineViewModel.swift in Sources */,
+				9648F6D41D87194C00E8DC09 /* TimelineCell.swift in Sources */,
 				961948691D867F6600563A01 /* TwitterClient.swift in Sources */,
 				96E2C0611D8303D000D4186A /* AppDelegate.swift in Sources */,
 			);

@@ -41,8 +41,9 @@ final class TwitterGetRequest: NSObject {
                 self.alert.showAlert("Error", alertMessage: "\(error)", buttonTitle: ["OK"], buttonAction: [{}])
                 return
             }
-            
+            print("\(jsonArray)")
             for json in jsonArray {
+                print("\(json)")
                 let responseElement = Variable(TwitterGetResponse(json as! Map)!)
                 response.append(responseElement)
             }

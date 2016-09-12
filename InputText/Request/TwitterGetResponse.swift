@@ -18,7 +18,6 @@ class TwitterGetResponse: Mappable {
     }
 
     required init?(_ map: Map) {
-        tweetText <- map["text"]
     }
     
     init() { }

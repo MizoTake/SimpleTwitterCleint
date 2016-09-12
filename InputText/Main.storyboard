@@ -64,7 +64,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="90" id="mp8-D1-g5z">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TimelineCell" rowHeight="90" id="mp8-D1-g5z" customClass="TimelineCell" customModule="InputText" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="92" width="600" height="90"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mp8-D1-g5z" id="Gam-e3-uLK">
@@ -77,7 +77,7 @@
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" text="Tweet" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="pLZ-ys-1T2">
                                                     <rect key="frame" x="8" y="8" width="568" height="57.5"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                 </textView>
                                             </subviews>
@@ -97,6 +97,9 @@
                                         <constraint firstItem="uHt-M6-cgE" firstAttribute="trailing" secondItem="Gam-e3-uLK" secondAttribute="trailingMargin" id="vcD-eo-O1w"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="textView" destination="pLZ-ys-1T2" id="93N-FX-a0X"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -105,12 +108,17 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Root View Controller" id="3xM-UM-4OB">
+                        <barButtonItem key="leftBarButtonItem" title="Reload" id="b6l-0s-9bQ"/>
                         <barButtonItem key="rightBarButtonItem" title="SendPage" id="1NK-m6-K11" userLabel="Send">
                             <connections>
                                 <segue destination="BYZ-38-t0r" kind="modal" id="RF8-dq-Hkk"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="reloadButton" destination="b6l-0s-9bQ" id="Un3-cH-CYX"/>
+                        <outlet property="tableview" destination="7Jc-CU-K6l" id="KBD-ok-zk8"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OMg-N0-Uua" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
