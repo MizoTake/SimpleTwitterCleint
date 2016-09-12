@@ -10,7 +10,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class SendViewController: UIViewController, UITextViewDelegate {
+final class SendViewController: UIViewController, UITextViewDelegate {
     
     @IBOutlet private weak var textView: UITextView!
     

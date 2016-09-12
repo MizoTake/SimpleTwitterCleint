@@ -58,18 +58,44 @@
         <!--Root View Controller-->
         <scene sceneID="JHT-D5-ihP">
             <objects>
-                <tableViewController id="8QA-9w-lax" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="7Jc-CU-K6l">
+                <tableViewController id="8QA-9w-lax" customClass="TimelineViewController" customModule="InputText" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" sectionHeaderHeight="28" sectionFooterHeight="28" id="7Jc-CU-K6l">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="mp8-D1-g5z">
-                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="90" id="mp8-D1-g5z">
+                                <rect key="frame" x="0.0" y="92" width="600" height="90"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mp8-D1-g5z" id="Gam-e3-uLK">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="89.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uHt-M6-cgE">
+                                            <rect key="frame" x="8" y="8" width="584" height="73.5"/>
+                                            <subviews>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" text="Tweet" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="pLZ-ys-1T2">
+                                                    <rect key="frame" x="8" y="8" width="568" height="57.5"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstItem="pLZ-ys-1T2" firstAttribute="leading" secondItem="uHt-M6-cgE" secondAttribute="leading" constant="8" id="6cv-4g-Rzg"/>
+                                                <constraint firstAttribute="bottom" secondItem="pLZ-ys-1T2" secondAttribute="bottom" constant="8" id="VzL-1Z-Re6"/>
+                                                <constraint firstItem="pLZ-ys-1T2" firstAttribute="top" secondItem="uHt-M6-cgE" secondAttribute="top" constant="8" id="miQ-PO-jH5"/>
+                                                <constraint firstAttribute="trailing" secondItem="pLZ-ys-1T2" secondAttribute="trailing" constant="8" id="vgS-D9-891"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="uHt-M6-cgE" firstAttribute="bottom" secondItem="Gam-e3-uLK" secondAttribute="bottomMargin" id="3mn-Ks-KYT"/>
+                                        <constraint firstItem="uHt-M6-cgE" firstAttribute="leading" secondItem="Gam-e3-uLK" secondAttribute="leadingMargin" id="C91-AG-NWx"/>
+                                        <constraint firstItem="uHt-M6-cgE" firstAttribute="top" secondItem="Gam-e3-uLK" secondAttribute="topMargin" id="Z6X-em-z7D"/>
+                                        <constraint firstItem="uHt-M6-cgE" firstAttribute="trailing" secondItem="Gam-e3-uLK" secondAttribute="trailingMargin" id="vcD-eo-O1w"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>

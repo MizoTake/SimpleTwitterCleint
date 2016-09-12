@@ -9,11 +9,16 @@
 /* Begin PBXBuildFile section */
 		961948641D867C2900563A01 /* SendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961948631D867C2900563A01 /* SendViewController.swift */; };
 		961948691D867F6600563A01 /* TwitterClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961948681D867F6600563A01 /* TwitterClient.swift */; };
+		9619486C1D868B9D00563A01 /* AlertDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9619486B1D868B9D00563A01 /* AlertDialog.swift */; };
+		9619486F1D86F84B00563A01 /* TwitterGetRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9619486E1D86F84B00563A01 /* TwitterGetRequest.swift */; };
+		961948731D87039800563A01 /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 961948721D87039800563A01 /* ObjectMapper.framework */; };
+		961948751D8706B800563A01 /* TwitterGetResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961948741D8706B800563A01 /* TwitterGetResponse.swift */; };
+		961948771D87159700563A01 /* TimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961948761D87159700563A01 /* TimelineViewController.swift */; };
 		961EC3F61D830A9700AA7275 /* RxBlocking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 961EC3F21D830A9700AA7275 /* RxBlocking.framework */; };
 		961EC3F71D830A9700AA7275 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 961EC3F31D830A9700AA7275 /* RxCocoa.framework */; };
 		961EC3F81D830A9700AA7275 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 961EC3F41D830A9700AA7275 /* RxSwift.framework */; };
+		9648F6CF1D8716F200E8DC09 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9648F6CE1D8716F200E8DC09 /* Main.storyboard */; };
 		96E2C0611D8303D000D4186A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E2C0601D8303D000D4186A /* AppDelegate.swift */; };
-		96E2C0661D8303D000D4186A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96E2C0641D8303D000D4186A /* Main.storyboard */; };
 		96E2C0681D8303D000D4186A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96E2C0671D8303D000D4186A /* Assets.xcassets */; };
 		96E2C0761D8303D000D4186A /* InputTextTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E2C0751D8303D000D4186A /* InputTextTests.swift */; };
 		96E2C0811D8303D000D4186A /* InputTextUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E2C0801D8303D000D4186A /* InputTextUITests.swift */; };
@@ -39,12 +44,17 @@
 /* Begin PBXFileReference section */
 		961948631D867C2900563A01 /* SendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SendViewController.swift; path = ViewController/SendViewController.swift; sourceTree = "<group>"; };
 		961948681D867F6600563A01 /* TwitterClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterClient.swift; sourceTree = "<group>"; };
+		9619486B1D868B9D00563A01 /* AlertDialog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertDialog.swift; sourceTree = "<group>"; };
+		9619486E1D86F84B00563A01 /* TwitterGetRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterGetRequest.swift; sourceTree = "<group>"; };
+		961948721D87039800563A01 /* ObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectMapper.framework; path = Carthage/Build/iOS/ObjectMapper.framework; sourceTree = "<group>"; };
+		961948741D8706B800563A01 /* TwitterGetResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterGetResponse.swift; sourceTree = "<group>"; };
+		961948761D87159700563A01 /* TimelineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TimelineViewController.swift; path = ViewController/TimelineViewController.swift; sourceTree = "<group>"; };
 		961EC3F21D830A9700AA7275 /* RxBlocking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxBlocking.framework; path = Carthage/Build/iOS/RxBlocking.framework; sourceTree = "<group>"; };
 		961EC3F31D830A9700AA7275 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
 		961EC3F41D830A9700AA7275 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		9648F6CE1D8716F200E8DC09 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		96E2C05D1D8303D000D4186A /* InputText.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InputText.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96E2C0601D8303D000D4186A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		96E2C0651D8303D000D4186A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		96E2C0671D8303D000D4186A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		96E2C06C1D8303D000D4186A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		96E2C0711D8303D000D4186A /* InputTextTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InputTextTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -60,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				961948731D87039800563A01 /* ObjectMapper.framework in Frameworks */,
 				961EC3F61D830A9700AA7275 /* RxBlocking.framework in Frameworks */,
 				961EC3F71D830A9700AA7275 /* RxCocoa.framework in Frameworks */,
 				961EC3F81D830A9700AA7275 /* RxSwift.framework in Frameworks */,
@@ -87,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				961948631D867C2900563A01 /* SendViewController.swift */,
+				961948761D87159700563A01 /* TimelineViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -94,6 +106,7 @@
 		961948661D867C4900563A01 /* framework */ = {
 			isa = PBXGroup;
 			children = (
+				961948721D87039800563A01 /* ObjectMapper.framework */,
 				961EC3F31D830A9700AA7275 /* RxCocoa.framework */,
 				961EC3F41D830A9700AA7275 /* RxSwift.framework */,
 				961EC3F21D830A9700AA7275 /* RxBlocking.framework */,
@@ -108,6 +121,30 @@
 				961948681D867F6600563A01 /* TwitterClient.swift */,
 			);
 			path = SNS;
+			sourceTree = "<group>";
+		};
+		9619486A1D868B5800563A01 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				9619486B1D868B9D00563A01 /* AlertDialog.swift */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		9619486D1D86BECA00563A01 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				9619486E1D86F84B00563A01 /* TwitterGetRequest.swift */,
+				961948741D8706B800563A01 /* TwitterGetResponse.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		961948781D8715F900563A01 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		96E2C0541D8303D000D4186A = {
@@ -133,10 +170,13 @@
 		96E2C05F1D8303D000D4186A /* InputText */ = {
 			isa = PBXGroup;
 			children = (
+				961948781D8715F900563A01 /* ViewModel */,
 				96E2C0601D8303D000D4186A /* AppDelegate.swift */,
-				96E2C0641D8303D000D4186A /* Main.storyboard */,
+				9648F6CE1D8716F200E8DC09 /* Main.storyboard */,
 				961948651D867C3C00563A01 /* ViewController */,
 				961948671D867F3E00563A01 /* SNS */,
+				9619486D1D86BECA00563A01 /* Request */,
+				9619486A1D868B5800563A01 /* Other */,
 				96E2C0671D8303D000D4186A /* Assets.xcassets */,
 				96E2C06C1D8303D000D4186A /* Info.plist */,
 				961948661D867C4900563A01 /* framework */,
@@ -268,8 +308,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9648F6CF1D8716F200E8DC09 /* Main.storyboard in Resources */,
 				96E2C0681D8303D000D4186A /* Assets.xcassets in Resources */,
-				96E2C0661D8303D000D4186A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,6 +339,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/RxBlocking.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/ObjectMapper.framework",
 			);
 			outputPaths = (
 			);
@@ -313,7 +354,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9619486F1D86F84B00563A01 /* TwitterGetRequest.swift in Sources */,
+				961948751D8706B800563A01 /* TwitterGetResponse.swift in Sources */,
+				9619486C1D868B9D00563A01 /* AlertDialog.swift in Sources */,
 				961948641D867C2900563A01 /* SendViewController.swift in Sources */,
+				961948771D87159700563A01 /* TimelineViewController.swift in Sources */,
 				961948691D867F6600563A01 /* TwitterClient.swift in Sources */,
 				96E2C0611D8303D000D4186A /* AppDelegate.swift in Sources */,
 			);
@@ -349,17 +394,6 @@
 			targetProxy = 96E2C07D1D8303D000D4186A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		96E2C0641D8303D000D4186A /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				96E2C0651D8303D000D4186A /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		96E2C0831D8303D000D4186A /* Debug */ = {
