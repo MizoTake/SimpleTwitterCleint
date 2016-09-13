@@ -56,7 +56,7 @@
             </objects>
             <point key="canvasLocation" x="905" y="265"/>
         </scene>
-        <!--My Tweet Log-->
+        <!--Another User Timeline-->
         <scene sceneID="JHT-D5-ihP">
             <objects>
                 <tableViewController id="8QA-9w-lax" customClass="TimelineViewController" customModule="SimpleTwitterClient" customModuleProvider="target" sceneMemberID="viewController">
@@ -108,7 +108,7 @@
                             <outlet property="delegate" destination="8QA-9w-lax" id="BnP-H1-AO9"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="My Tweet Log" id="3xM-UM-4OB">
+                    <navigationItem key="navigationItem" title="Another User Timeline" id="3xM-UM-4OB">
                         <leftBarButtonItems>
                             <barButtonItem title="Get" id="b6l-0s-9bQ"/>
                             <barButtonItem title="Reload" id="E7i-ye-YsR"/>

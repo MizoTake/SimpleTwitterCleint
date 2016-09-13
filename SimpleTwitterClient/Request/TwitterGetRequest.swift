@@ -15,7 +15,7 @@ import ObjectMapper
 
 final class TwitterGetRequest: NSObject {
     
-    private let url = NSURL(string: "https://api.twitter.com/1.1/statuses/user_timeline.json")
+    private let url = NSURL(string: "https://api.twitter.com/1.1/statuses/home_timeline.json")
     private let alert = AlertDialog()
     private let disposeBag = DisposeBag()
     

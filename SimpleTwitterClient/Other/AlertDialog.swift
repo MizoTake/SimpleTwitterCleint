@@ -13,7 +13,7 @@ import RxSwift
 final class AlertDialog: NSObject {
     
     func showAlert(alertTitle: String, alertMessage: String, buttonTitle: [String], buttonAction: [()->Void]) {
-        guard let view = UIApplication.sharedApplication().keyWindow?.rootViewController else {
+        guard let view = UIApplication.sharedApplication().keyWindow!.rootViewController else {
             return
         }
         let alert = UIAlertController(title: alertTitle, message: alertMessage, preferredStyle: .Alert)
@@ -22,13 +22,14 @@ final class AlertDialog: NSObject {
             buttonAction[i]()
             view.dismissViewControllerAnimated(true, completion: nil)
             }
+            
             alert.addAction(button)
         }
         view.presentViewController(alert, animated: true, completion: nil)
     }
     
     func showAlertSheet(alertTitle: String, alertMessage: String, selectionTitle: [String], selectionAction: [(Int)->()]) {
-        guard let view = UIApplication.sharedApplication().keyWindow?.rootViewController else {
+        guard let view = UIApplication.sharedApplication().keyWindow!.rootViewController else {
             return
         }
         let alert = UIAlertController(title: alertTitle, message: alertMessage, preferredStyle: .ActionSheet)
@@ -40,6 +41,7 @@ final class AlertDialog: NSObject {
             }
             alert.addAction(select)
         }
+        
         view.presentViewController(alert, animated: true, completion: nil)
     }
     
