@@ -7,7 +7,14 @@
 //
 
 import UIKit
+import Accounts
 
 class SendViewModel: NSObject {
+    
+    let postTweet = TwitterPostRequest()
+    
+    func post(tweet: String) {
+        postTweet.request(TwitterClient.myAccount.value!, tweet: tweet)
+    }
     
 }

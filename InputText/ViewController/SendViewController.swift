@@ -24,6 +24,8 @@ final class SendViewController: UIViewController, UITextViewDelegate {
     
     private let MIN_CHARACTERS = 1
     
+    private let viewModel = SendViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
@@ -50,6 +52,13 @@ final class SendViewController: UIViewController, UITextViewDelegate {
             }
             .subscribeNext{ [unowned self] in
                 self.sendButton.enabled = $0
+            }
+            .addDisposableTo(disposeBag)
+        
+        sendButton.rx_tap
+            .subscribeNext{ [unowned self] in
+                self.viewModel.post(self.textView.text)
+                self.dismissViewControllerAnimated(true, completion: nil)
             }
             .addDisposableTo(disposeBag)
         

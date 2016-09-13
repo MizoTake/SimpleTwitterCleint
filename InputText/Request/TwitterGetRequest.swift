@@ -20,7 +20,6 @@ final class TwitterGetRequest: NSObject {
     let disposeBag = DisposeBag()
     
     func request(account: ACAccount) -> Observable<[TwitterGetResponse]> {
-        var jsonArray = NSArray()
         
         let request = SLRequest(forServiceType: SLServiceTypeTwitter,
                                 requestMethod: .GET,
@@ -29,25 +28,29 @@ final class TwitterGetRequest: NSObject {
         
         request.account = account
         
+        return getResponse(request)
+    }
+    
+    func getResponse(request: SLRequest) -> Observable<[TwitterGetResponse]> {
+        var jsonArray = NSArray()
         return Observable.create { (response) in
             request.performRequestWithHandler { (responseData, urlResponse, error) -> Void in
                 if error != nil {
-                    self.alert.showAlert("Error", alertMessage: "\(error)", buttonTitle: ["OK"], buttonAction: [{self.alert.openSetting()}])
+                    self.alert.showAlert("Error", alertMessage: "\(error)", buttonTitle: ["OK"], buttonAction: [{}])
                     return
                 }
                 
                 do {
                     try jsonArray = NSJSONSerialization.JSONObjectWithData(responseData, options: .AllowFragments) as! NSArray
                 } catch {
-                    self.alert.showAlert("Error", alertMessage: "\(error)", buttonTitle: ["OK"], buttonAction:  [{self.alert.openSetting()}])
+                    self.alert.showAlert("Error", alertMessage: "\(error)", buttonTitle: ["OK"], buttonAction:  [{}])
                     return
                 }
-            
+                
                 response.onNext(Mapper<TwitterGetResponse>().mapArray(jsonArray)!)
             }
             return NopDisposable.instance
         }
-        
     }
     
 }

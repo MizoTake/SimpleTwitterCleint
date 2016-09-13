@@ -18,7 +18,7 @@ final class TwitterClient: NSObject {
     
     var accountStore = ACAccountStore()
     
-    var myAccount = Variable<ACAccount?>(nil)
+    static var myAccount = Variable<ACAccount?>(nil)
     
     func setup() {
         let accountType = accountStore.accountTypeWithAccountTypeIdentifier(ACAccountTypeIdentifierTwitter)
@@ -46,7 +46,7 @@ final class TwitterClient: NSObject {
     
     func selectAccount(accounts: [ACAccount]) {
         let accountNames = accountnames(accounts)
-        var action = [{self.myAccount.value = accounts[$0]}]
+        var action = [{TwitterClient.myAccount.value = accounts[$0]}]
         for _ in 0..<accountNames.count - 1 {
             action += action
         }
