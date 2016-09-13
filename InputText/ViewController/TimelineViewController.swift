@@ -31,10 +31,10 @@ class TimelineViewController: UITableViewController {
     func setup() {
         tableview.dataSource = viewModel
         
+        viewModel.setupTwitter()
+        
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 10000
-        
-        viewModel.setupTwitter()
     }
     
     func bind() {

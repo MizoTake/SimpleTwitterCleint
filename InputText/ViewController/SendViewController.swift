@@ -27,10 +27,11 @@ final class SendViewController: UIViewController, UITextViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
+        bind()
     }
     
     func setup() {
-        bind()
+        
     }
     
     func bind() {
