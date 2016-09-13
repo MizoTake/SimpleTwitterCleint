@@ -38,7 +38,7 @@ final class TimelineViewModel: NSObject, UITableViewDataSource {
                     .subscribeNext { [unowned self] in
                         $0.forEach {
                             self.entity.append(TimelineEntity())
-                            self.entity[self.entity.endIndex - 1].register($0.tweetText)
+                            self.entity[self.entity.endIndex - 1].register($0.tweetText, userName: $0.userName)
                         }
                     }
                     .addDisposableTo(self.disposeBag)

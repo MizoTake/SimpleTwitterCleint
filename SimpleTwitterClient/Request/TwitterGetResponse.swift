@@ -11,9 +11,12 @@ import ObjectMapper
 
 final class TwitterGetResponse: Mappable {
     
+    private(set) var userName: String!
+    
     private(set) var tweetText: String!
     
     func mapping(map: Map) {
+        userName <- map["user.name"]
         tweetText <- map["text"]
     }
 

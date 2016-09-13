@@ -10,9 +10,12 @@ import UIKit
 
 final class TimelineCell: UITableViewCell {
     
+    @IBOutlet weak var userName: UITextView!
+    
     @IBOutlet weak var textView: UITextView!
     
     func conect(entity: TimelineEntity) {
         textView.text = entity.tweetText
+        userName.text = entity.userName
     }
 }

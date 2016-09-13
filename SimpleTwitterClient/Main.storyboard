@@ -60,23 +60,32 @@
         <scene sceneID="JHT-D5-ihP">
             <objects>
                 <tableViewController id="8QA-9w-lax" customClass="TimelineViewController" customModule="SimpleTwitterClient" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" sectionHeaderHeight="28" sectionFooterHeight="28" id="7Jc-CU-K6l">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="150" sectionHeaderHeight="28" sectionFooterHeight="28" id="7Jc-CU-K6l">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TimelineCell" rowHeight="90" id="mp8-D1-g5z" customClass="TimelineCell" customModule="SimpleTwitterClient" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="92" width="600" height="90"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TimelineCell" rowHeight="150" id="mp8-D1-g5z" customClass="TimelineCell" customModule="SimpleTwitterClient" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="600" height="150"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mp8-D1-g5z" id="Gam-e3-uLK">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="89.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="150"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uHt-M6-cgE">
-                                            <rect key="frame" x="8" y="8" width="584" height="73.5"/>
+                                            <rect key="frame" x="8" y="8" width="584" height="134"/>
                                             <subviews>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="UserName" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PSS-sL-Tid">
+                                                    <rect key="frame" x="8" y="8" width="568" height="28"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="28" id="d78-WK-irN"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Tweet" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pLZ-ys-1T2">
-                                                    <rect key="frame" x="8" y="8" width="568" height="57.5"/>
+                                                    <rect key="frame" x="8" y="37" width="568" height="89"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -84,9 +93,15 @@
                                             </subviews>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
+                                                <constraint firstItem="PSS-sL-Tid" firstAttribute="leading" secondItem="uHt-M6-cgE" secondAttribute="leading" constant="8" id="4Ps-QZ-lmi"/>
+                                                <constraint firstItem="pLZ-ys-1T2" firstAttribute="leading" secondItem="uHt-M6-cgE" secondAttribute="leading" constant="8" id="5MY-1O-VQv"/>
                                                 <constraint firstItem="pLZ-ys-1T2" firstAttribute="leading" secondItem="uHt-M6-cgE" secondAttribute="leading" constant="8" id="6cv-4g-Rzg"/>
+                                                <constraint firstAttribute="trailing" secondItem="PSS-sL-Tid" secondAttribute="trailing" constant="8" id="8MH-tH-bKT"/>
+                                                <constraint firstAttribute="trailing" secondItem="pLZ-ys-1T2" secondAttribute="trailing" constant="8" id="FfR-6T-7iu"/>
+                                                <constraint firstAttribute="bottom" secondItem="pLZ-ys-1T2" secondAttribute="bottom" constant="8" id="L9c-rR-QaG"/>
+                                                <constraint firstItem="PSS-sL-Tid" firstAttribute="top" secondItem="uHt-M6-cgE" secondAttribute="topMargin" id="Siv-XP-Vcw"/>
                                                 <constraint firstAttribute="bottom" secondItem="pLZ-ys-1T2" secondAttribute="bottom" constant="8" id="VzL-1Z-Re6"/>
-                                                <constraint firstItem="pLZ-ys-1T2" firstAttribute="top" secondItem="uHt-M6-cgE" secondAttribute="top" constant="8" id="miQ-PO-jH5"/>
+                                                <constraint firstItem="pLZ-ys-1T2" firstAttribute="top" secondItem="PSS-sL-Tid" secondAttribute="bottom" constant="1" id="ofp-AM-0wK"/>
                                                 <constraint firstAttribute="trailing" secondItem="pLZ-ys-1T2" secondAttribute="trailing" constant="8" id="vgS-D9-891"/>
                                             </constraints>
                                         </view>
@@ -100,6 +115,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="textView" destination="pLZ-ys-1T2" id="93N-FX-a0X"/>
+                                    <outlet property="userName" destination="PSS-sL-Tid" id="VUM-Y3-75u"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

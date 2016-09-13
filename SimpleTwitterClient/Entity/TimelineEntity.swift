@@ -10,10 +10,13 @@ import UIKit
 
 final class TimelineEntity: NSObject {
     
+    private(set) var userName = ""
+    
     private(set) var tweetText = ""
     
-    func register(tweetText: String) {
+    func register(tweetText: String, userName: String) {
         self.tweetText = tweetText
+        self.userName = userName
     }
     
 }
