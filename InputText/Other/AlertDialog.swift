@@ -43,4 +43,10 @@ final class AlertDialog: NSObject {
         view.presentViewController(alert, animated: true, completion: nil)
     }
     
+    func openSetting() {
+        if let url = NSURL(string:UIApplicationOpenSettingsURLString) {
+            UIApplication.sharedApplication().openURL(url)
+        }
+    }
+    
 }

@@ -32,23 +32,21 @@ final class TwitterGetRequest: NSObject {
         return Observable.create { (response) in
             request.performRequestWithHandler { (responseData, urlResponse, error) -> Void in
                 if error != nil {
-                    self.alert.showAlert("Error", alertMessage: "\(error)", buttonTitle: ["OK"], buttonAction: [{}])
+                    self.alert.showAlert("Error", alertMessage: "\(error)", buttonTitle: ["OK"], buttonAction: [{self.alert.openSetting()}])
                     return
                 }
-            
+                
                 do {
                     try jsonArray = NSJSONSerialization.JSONObjectWithData(responseData, options: .AllowFragments) as! NSArray
                 } catch {
-                    self.alert.showAlert("Error", alertMessage: "\(error)", buttonTitle: ["OK"], buttonAction:  [{}])
+                    self.alert.showAlert("Error", alertMessage: "\(error)", buttonTitle: ["OK"], buttonAction:  [{self.alert.openSetting()}])
                     return
                 }
             
-                //print("result : "+"\(jsonArray)")
                 response.onNext(Mapper<TwitterGetResponse>().mapArray(jsonArray)!)
             }
             return NopDisposable.instance
         }
-        
         
     }
     

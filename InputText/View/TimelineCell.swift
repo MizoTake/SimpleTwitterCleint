@@ -14,6 +14,5 @@ final class TimelineCell: UITableViewCell {
     
     func conect(entity: TimelineEntity) {
         textView.text = entity.tweetText
-        print("適応 " + entity.tweetText)
     }
 }

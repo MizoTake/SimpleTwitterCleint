@@ -31,15 +31,13 @@ final class TimelineViewModel: NSObject, UITableViewDataSource {
         
         twitterInfo.myAccount.asObservable()
             .subscribeOn(SerialDispatchQueueScheduler(globalConcurrentQueueQOS: .Background))
+            .filter{$0 != nil}
             .subscribeNext { [unowned self] in
                 self.timelineRequest.request($0!)
                     .subscribeNext { [unowned self] in
                         $0.forEach {
                             self.entity.append(TimelineEntity())
-                            guard let tweet = $0.tweetText else {
-                                return
-                            }
-                            self.entity[self.entity.endIndex - 1].register(tweet)
+                            self.entity[self.entity.endIndex - 1].register($0.tweetText)
                         }
                         self.checkGet.value = true
                     }
