@@ -23,6 +23,7 @@
 		9648F6D71D871CF100E8DC09 /* TimelineEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9648F6D61D871CF100E8DC09 /* TimelineEntity.swift */; };
 		9648F6D91D87899700E8DC09 /* SendViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9648F6D81D87899700E8DC09 /* SendViewModel.swift */; };
 		9648F6DB1D879F3C00E8DC09 /* TwitterPostRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9648F6DA1D879F3C00E8DC09 /* TwitterPostRequest.swift */; };
+		967B60B01D87B6CE00013F40 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 96E2C06C1D8303D000D4186A /* Info.plist */; };
 		96E2C0611D8303D000D4186A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E2C0601D8303D000D4186A /* AppDelegate.swift */; };
 		96E2C0681D8303D000D4186A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96E2C0671D8303D000D4186A /* Assets.xcassets */; };
 		96E2C0761D8303D000D4186A /* InputTextTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E2C0751D8303D000D4186A /* InputTextTests.swift */; };
@@ -63,14 +64,14 @@
 		9648F6D61D871CF100E8DC09 /* TimelineEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineEntity.swift; sourceTree = "<group>"; };
 		9648F6D81D87899700E8DC09 /* SendViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendViewModel.swift; sourceTree = "<group>"; };
 		9648F6DA1D879F3C00E8DC09 /* TwitterPostRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterPostRequest.swift; sourceTree = "<group>"; };
-		96E2C05D1D8303D000D4186A /* InputText.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InputText.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		96E2C05D1D8303D000D4186A /* SimpleTwitterClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleTwitterClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96E2C0601D8303D000D4186A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		96E2C0671D8303D000D4186A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		96E2C06C1D8303D000D4186A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		96E2C0711D8303D000D4186A /* InputTextTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InputTextTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		96E2C0711D8303D000D4186A /* SimpleTwitterClient.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleTwitterClient.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		96E2C0751D8303D000D4186A /* InputTextTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputTextTests.swift; sourceTree = "<group>"; };
 		96E2C0771D8303D000D4186A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		96E2C07C1D8303D000D4186A /* InputTextUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InputTextUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		96E2C07C1D8303D000D4186A /* SimpleTwitterClient.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleTwitterClient.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		96E2C0801D8303D000D4186A /* InputTextUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputTextUITests.swift; sourceTree = "<group>"; };
 		96E2C0821D8303D000D4186A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -179,9 +180,9 @@
 		96E2C0541D8303D000D4186A = {
 			isa = PBXGroup;
 			children = (
-				96E2C05F1D8303D000D4186A /* InputText */,
-				96E2C0741D8303D000D4186A /* InputTextTests */,
-				96E2C07F1D8303D000D4186A /* InputTextUITests */,
+				96E2C05F1D8303D000D4186A /* SimpleTwitterClient */,
+				96E2C0741D8303D000D4186A /* SimpleTwitterClientTests */,
+				96E2C07F1D8303D000D4186A /* SimpleTwitterClientUITests */,
 				96E2C05E1D8303D000D4186A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -189,14 +190,14 @@
 		96E2C05E1D8303D000D4186A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				96E2C05D1D8303D000D4186A /* InputText.app */,
-				96E2C0711D8303D000D4186A /* InputTextTests.xctest */,
-				96E2C07C1D8303D000D4186A /* InputTextUITests.xctest */,
+				96E2C05D1D8303D000D4186A /* SimpleTwitterClient.app */,
+				96E2C0711D8303D000D4186A /* SimpleTwitterClient.xctest */,
+				96E2C07C1D8303D000D4186A /* SimpleTwitterClient.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		96E2C05F1D8303D000D4186A /* InputText */ = {
+		96E2C05F1D8303D000D4186A /* SimpleTwitterClient */ = {
 			isa = PBXGroup;
 			children = (
 				96E2C0601D8303D000D4186A /* AppDelegate.swift */,
@@ -212,33 +213,33 @@
 				96E2C06C1D8303D000D4186A /* Info.plist */,
 				961948661D867C4900563A01 /* framework */,
 			);
-			path = InputText;
+			path = SimpleTwitterClient;
 			sourceTree = "<group>";
 		};
-		96E2C0741D8303D000D4186A /* InputTextTests */ = {
+		96E2C0741D8303D000D4186A /* SimpleTwitterClientTests */ = {
 			isa = PBXGroup;
 			children = (
 				96E2C0751D8303D000D4186A /* InputTextTests.swift */,
 				96E2C0771D8303D000D4186A /* Info.plist */,
 			);
-			path = InputTextTests;
+			path = SimpleTwitterClientTests;
 			sourceTree = "<group>";
 		};
-		96E2C07F1D8303D000D4186A /* InputTextUITests */ = {
+		96E2C07F1D8303D000D4186A /* SimpleTwitterClientUITests */ = {
 			isa = PBXGroup;
 			children = (
 				96E2C0801D8303D000D4186A /* InputTextUITests.swift */,
 				96E2C0821D8303D000D4186A /* Info.plist */,
 			);
-			path = InputTextUITests;
+			path = SimpleTwitterClientUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		96E2C05C1D8303D000D4186A /* InputText */ = {
+		96E2C05C1D8303D000D4186A /* SimpleTwitterClient */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 96E2C0851D8303D000D4186A /* Build configuration list for PBXNativeTarget "InputText" */;
+			buildConfigurationList = 96E2C0851D8303D000D4186A /* Build configuration list for PBXNativeTarget "SimpleTwitterClient" */;
 			buildPhases = (
 				96E2C0591D8303D000D4186A /* Sources */,
 				96E2C05A1D8303D000D4186A /* Frameworks */,
@@ -249,14 +250,14 @@
 			);
 			dependencies = (
 			);
-			name = InputText;
+			name = SimpleTwitterClient;
 			productName = InputText;
-			productReference = 96E2C05D1D8303D000D4186A /* InputText.app */;
+			productReference = 96E2C05D1D8303D000D4186A /* SimpleTwitterClient.app */;
 			productType = "com.apple.product-type.application";
 		};
-		96E2C0701D8303D000D4186A /* InputTextTests */ = {
+		96E2C0701D8303D000D4186A /* SimpleTwitterClientTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 96E2C0881D8303D000D4186A /* Build configuration list for PBXNativeTarget "InputTextTests" */;
+			buildConfigurationList = 96E2C0881D8303D000D4186A /* Build configuration list for PBXNativeTarget "SimpleTwitterClientTests" */;
 			buildPhases = (
 				96E2C06D1D8303D000D4186A /* Sources */,
 				96E2C06E1D8303D000D4186A /* Frameworks */,
@@ -267,14 +268,14 @@
 			dependencies = (
 				96E2C0731D8303D000D4186A /* PBXTargetDependency */,
 			);
-			name = InputTextTests;
+			name = SimpleTwitterClientTests;
 			productName = InputTextTests;
-			productReference = 96E2C0711D8303D000D4186A /* InputTextTests.xctest */;
+			productReference = 96E2C0711D8303D000D4186A /* SimpleTwitterClient.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		96E2C07B1D8303D000D4186A /* InputTextUITests */ = {
+		96E2C07B1D8303D000D4186A /* SimpleTwitterClientUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 96E2C08B1D8303D000D4186A /* Build configuration list for PBXNativeTarget "InputTextUITests" */;
+			buildConfigurationList = 96E2C08B1D8303D000D4186A /* Build configuration list for PBXNativeTarget "SimpleTwitterClientUITests" */;
 			buildPhases = (
 				96E2C0781D8303D000D4186A /* Sources */,
 				96E2C0791D8303D000D4186A /* Frameworks */,
@@ -285,9 +286,9 @@
 			dependencies = (
 				96E2C07E1D8303D000D4186A /* PBXTargetDependency */,
 			);
-			name = InputTextUITests;
+			name = SimpleTwitterClientUITests;
 			productName = InputTextUITests;
-			productReference = 96E2C07C1D8303D000D4186A /* InputTextUITests.xctest */;
+			productReference = 96E2C07C1D8303D000D4186A /* SimpleTwitterClient.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -314,7 +315,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 96E2C0581D8303D000D4186A /* Build configuration list for PBXProject "InputText" */;
+			buildConfigurationList = 96E2C0581D8303D000D4186A /* Build configuration list for PBXProject "SimpleTwitterClient" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -327,9 +328,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				96E2C05C1D8303D000D4186A /* InputText */,
-				96E2C0701D8303D000D4186A /* InputTextTests */,
-				96E2C07B1D8303D000D4186A /* InputTextUITests */,
+				96E2C05C1D8303D000D4186A /* SimpleTwitterClient */,
+				96E2C0701D8303D000D4186A /* SimpleTwitterClientTests */,
+				96E2C07B1D8303D000D4186A /* SimpleTwitterClientUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -341,6 +342,7 @@
 			files = (
 				9648F6CF1D8716F200E8DC09 /* Main.storyboard in Resources */,
 				96E2C0681D8303D000D4186A /* Assets.xcassets in Resources */,
+				967B60B01D87B6CE00013F40 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -421,12 +423,12 @@
 /* Begin PBXTargetDependency section */
 		96E2C0731D8303D000D4186A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 96E2C05C1D8303D000D4186A /* InputText */;
+			target = 96E2C05C1D8303D000D4186A /* SimpleTwitterClient */;
 			targetProxy = 96E2C0721D8303D000D4186A /* PBXContainerItemProxy */;
 		};
 		96E2C07E1D8303D000D4186A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 96E2C05C1D8303D000D4186A /* InputText */;
+			target = 96E2C05C1D8303D000D4186A /* SimpleTwitterClient */;
 			targetProxy = 96E2C07D1D8303D000D4186A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -526,10 +528,10 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = InputText/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/SimpleTwitterClient/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.FIT.InputText;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = SimpleTwitterClient;
 			};
 			name = Debug;
 		};
@@ -542,10 +544,10 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = InputText/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/SimpleTwitterClient/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.FIT.InputText;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = SimpleTwitterClient;
 			};
 			name = Release;
 		};
@@ -560,8 +562,8 @@
 				INFOPLIST_FILE = InputTextTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.FIT.InputTextTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/InputText.app/InputText";
+				PRODUCT_NAME = SimpleTwitterClient;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SimpleTwitterClient.app/SimpleTwitterClient";
 			};
 			name = Debug;
 		};
@@ -576,8 +578,8 @@
 				INFOPLIST_FILE = InputTextTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.FIT.InputTextTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/InputText.app/InputText";
+				PRODUCT_NAME = SimpleTwitterClient;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SimpleTwitterClient.app/SimpleTwitterClient";
 			};
 			name = Release;
 		};
@@ -591,7 +593,7 @@
 				INFOPLIST_FILE = InputTextUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.FIT.InputTextUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = SimpleTwitterClient;
 				TEST_TARGET_NAME = InputText;
 			};
 			name = Debug;
@@ -606,7 +608,7 @@
 				INFOPLIST_FILE = InputTextUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.FIT.InputTextUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = SimpleTwitterClient;
 				TEST_TARGET_NAME = InputText;
 			};
 			name = Release;
@@ -614,7 +616,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		96E2C0581D8303D000D4186A /* Build configuration list for PBXProject "InputText" */ = {
+		96E2C0581D8303D000D4186A /* Build configuration list for PBXProject "SimpleTwitterClient" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				96E2C0831D8303D000D4186A /* Debug */,
@@ -623,7 +625,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		96E2C0851D8303D000D4186A /* Build configuration list for PBXNativeTarget "InputText" */ = {
+		96E2C0851D8303D000D4186A /* Build configuration list for PBXNativeTarget "SimpleTwitterClient" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				96E2C0861D8303D000D4186A /* Debug */,
@@ -632,7 +634,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		96E2C0881D8303D000D4186A /* Build configuration list for PBXNativeTarget "InputTextTests" */ = {
+		96E2C0881D8303D000D4186A /* Build configuration list for PBXNativeTarget "SimpleTwitterClientTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				96E2C0891D8303D000D4186A /* Debug */,
@@ -641,7 +643,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		96E2C08B1D8303D000D4186A /* Build configuration list for PBXNativeTarget "InputTextUITests" */ = {
+		96E2C08B1D8303D000D4186A /* Build configuration list for PBXNativeTarget "SimpleTwitterClientUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				96E2C08C1D8303D000D4186A /* Debug */,

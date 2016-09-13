@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "96E2C05C1D8303D000D4186A"
-               BuildableName = "InputText.app"
-               BlueprintName = "InputText"
-               ReferencedContainer = "container:InputText.xcodeproj">
+               BuildableName = "SimpleTwitterClient.app"
+               BlueprintName = "SimpleTwitterClient"
+               ReferencedContainer = "container:SimpleTwitterClient.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "96E2C0701D8303D000D4186A"
-               BuildableName = "InputTextTests.xctest"
-               BlueprintName = "InputTextTests"
-               ReferencedContainer = "container:InputText.xcodeproj">
+               BuildableName = "SimpleTwitterClient.xctest"
+               BlueprintName = "SimpleTwitterClientTests"
+               ReferencedContainer = "container:SimpleTwitterClient.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -43,9 +43,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "96E2C07B1D8303D000D4186A"
-               BuildableName = "InputTextUITests.xctest"
-               BlueprintName = "InputTextUITests"
-               ReferencedContainer = "container:InputText.xcodeproj">
+               BuildableName = "SimpleTwitterClient.xctest"
+               BlueprintName = "SimpleTwitterClientUITests"
+               ReferencedContainer = "container:SimpleTwitterClient.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -53,9 +53,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "96E2C05C1D8303D000D4186A"
-            BuildableName = "InputText.app"
-            BlueprintName = "InputText"
-            ReferencedContainer = "container:InputText.xcodeproj">
+            BuildableName = "SimpleTwitterClient.app"
+            BlueprintName = "SimpleTwitterClient"
+            ReferencedContainer = "container:SimpleTwitterClient.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -76,9 +76,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "96E2C05C1D8303D000D4186A"
-            BuildableName = "InputText.app"
-            BlueprintName = "InputText"
-            ReferencedContainer = "container:InputText.xcodeproj">
+            BuildableName = "SimpleTwitterClient.app"
+            BlueprintName = "SimpleTwitterClient"
+            ReferencedContainer = "container:SimpleTwitterClient.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -95,9 +95,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "96E2C05C1D8303D000D4186A"
-            BuildableName = "InputText.app"
-            BlueprintName = "InputText"
-            ReferencedContainer = "container:InputText.xcodeproj">
+            BuildableName = "SimpleTwitterClient.app"
+            BlueprintName = "SimpleTwitterClient"
+            ReferencedContainer = "container:SimpleTwitterClient.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

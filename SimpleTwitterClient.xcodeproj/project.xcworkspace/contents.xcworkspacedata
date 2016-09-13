@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:InputText.xcodeproj">
+      location = "self:/Users/mizoguchitakeru/XCodeProject/InputText/SimpleTwitterClient.xcodeproj">
    </FileRef>
 </Workspace>
