@@ -12,7 +12,9 @@ import RxSwift
 
 final class TimelineViewModel: NSObject, UITableViewDataSource {
     
-    var entity = [TimelineEntity()]
+    var checkGet = Variable<Bool>(false)
+    
+    var entity: [TimelineEntity] = []
     
     let timelineRequest = TwitterGetRequest()
     
@@ -25,14 +27,24 @@ final class TimelineViewModel: NSObject, UITableViewDataSource {
     }
     
     func get() {
+        checkGet.value = false
+        
         twitterInfo.myAccount.asObservable()
-            .subscribeOn(SerialDispatchQueueScheduler(globalConcurrentQueueQOS: .Default))
-            .subscribeNext({ [unowned self] in
-                self.timelineRequest.request($0!).forEach({
-                    self.entity.append(TimelineEntity())
-                    self.entity[self.entity.endIndex].register($0.value.tweetText)
-                })
-            })
+            .subscribeOn(SerialDispatchQueueScheduler(globalConcurrentQueueQOS: .Background))
+            .subscribeNext { [unowned self] in
+                self.timelineRequest.request($0!)
+                    .subscribeNext { [unowned self] in
+                        $0.forEach {
+                            self.entity.append(TimelineEntity())
+                            guard let tweet = $0.tweetText else {
+                                return
+                            }
+                            self.entity[self.entity.endIndex - 1].register(tweet)
+                        }
+                        self.checkGet.value = true
+                    }
+                    .addDisposableTo(self.disposeBag)
+            }
             .addDisposableTo(disposeBag)
     }
     

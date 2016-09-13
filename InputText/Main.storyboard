@@ -4,6 +4,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
     </dependencies>
     <scenes>
         <!--Send View Controller-->
@@ -55,7 +56,7 @@
             </objects>
             <point key="canvasLocation" x="905" y="265"/>
         </scene>
-        <!--Root View Controller-->
+        <!--My Time Line-->
         <scene sceneID="JHT-D5-ihP">
             <objects>
                 <tableViewController id="8QA-9w-lax" customClass="TimelineViewController" customModule="InputText" customModuleProvider="target" sceneMemberID="viewController">
@@ -107,8 +108,11 @@
                             <outlet property="delegate" destination="8QA-9w-lax" id="BnP-H1-AO9"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="3xM-UM-4OB">
-                        <barButtonItem key="leftBarButtonItem" title="Reload" id="b6l-0s-9bQ"/>
+                    <navigationItem key="navigationItem" title="My Time Line" id="3xM-UM-4OB">
+                        <leftBarButtonItems>
+                            <barButtonItem title="Get" id="b6l-0s-9bQ"/>
+                            <barButtonItem title="Reload" id="E7i-ye-YsR"/>
+                        </leftBarButtonItems>
                         <barButtonItem key="rightBarButtonItem" title="SendPage" id="1NK-m6-K11" userLabel="Send">
                             <connections>
                                 <segue destination="BYZ-38-t0r" kind="modal" id="RF8-dq-Hkk"/>
@@ -116,7 +120,8 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="reloadButton" destination="b6l-0s-9bQ" id="Un3-cH-CYX"/>
+                        <outlet property="getButton" destination="b6l-0s-9bQ" id="hAH-Af-hR7"/>
+                        <outlet property="reloadButton" destination="E7i-ye-YsR" id="Mn6-S7-4RA"/>
                         <outlet property="tableview" destination="7Jc-CU-K6l" id="KBD-ok-zk8"/>
                     </connections>
                 </tableViewController>

@@ -17,9 +17,10 @@ final class TwitterGetRequest: NSObject {
     
     let url = NSURL(string: "https://api.twitter.com/1.1/statuses/user_timeline.json")
     let alert = AlertDialog()
+    let disposeBag = DisposeBag()
     
-    func request(account: ACAccount) -> [Variable<TwitterGetResponse>] {
-        var response = [Variable<TwitterGetResponse>]()
+    func request(account: ACAccount) -> Observable<[TwitterGetResponse]> {
+        var jsonArray = NSArray()
         
         let request = SLRequest(forServiceType: SLServiceTypeTwitter,
                                 requestMethod: .GET,
@@ -28,28 +29,27 @@ final class TwitterGetRequest: NSObject {
         
         request.account = account
         
-        request.performRequestWithHandler { (responseData, urlResponse, error) -> Void in
+        return Observable.create { (response) in
+            request.performRequestWithHandler { (responseData, urlResponse, error) -> Void in
+                if error != nil {
+                    self.alert.showAlert("Error", alertMessage: "\(error)", buttonTitle: ["OK"], buttonAction: [{}])
+                    return
+                }
             
-            if error != nil {
-                self.alert.showAlert("Error", alertMessage: "\(error)", buttonTitle: ["OK"], buttonAction: [{}])
-            }
+                do {
+                    try jsonArray = NSJSONSerialization.JSONObjectWithData(responseData, options: .AllowFragments) as! NSArray
+                } catch {
+                    self.alert.showAlert("Error", alertMessage: "\(error)", buttonTitle: ["OK"], buttonAction:  [{}])
+                    return
+                }
             
-            var jsonArray: NSArray
-            do {
-                try jsonArray = NSJSONSerialization.JSONObjectWithData(responseData, options: .AllowFragments) as! NSArray
-            } catch {
-                self.alert.showAlert("Error", alertMessage: "\(error)", buttonTitle: ["OK"], buttonAction: [{}])
-                return
+                //print("result : "+"\(jsonArray)")
+                response.onNext(Mapper<TwitterGetResponse>().mapArray(jsonArray)!)
             }
-            print("\(jsonArray)")
-            for json in jsonArray {
-                print("\(json)")
-                let responseElement = Variable(TwitterGetResponse(json as! Map)!)
-                response.append(responseElement)
-            }
+            return NopDisposable.instance
         }
         
-        return response
+        
     }
     
 }

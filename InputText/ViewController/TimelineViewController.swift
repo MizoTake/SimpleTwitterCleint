@@ -16,7 +16,9 @@ class TimelineViewController: UITableViewController {
     
     @IBOutlet weak var reloadButton: UIBarButtonItem!
     
-    let data = TimelineViewModel()
+    @IBOutlet weak var getButton: UIBarButtonItem!
+    
+    let viewModel = TimelineViewModel()
     
     let disposeBag = DisposeBag()
     
@@ -27,20 +29,31 @@ class TimelineViewController: UITableViewController {
     }
     
     func setup() {
-        tableview.dataSource = data
+        tableview.dataSource = viewModel
         
         tableView.rowHeight = UITableViewAutomaticDimension
-        tableView.estimatedRowHeight = 0
+        tableView.estimatedRowHeight = 10000
         
-        data.setupTwitter()
+        viewModel.setupTwitter()
     }
     
     func bind() {
+        getButton.rx_tap
+            .subscribeNext { [unowned self] in
+                self.viewModel.get()
+            }
+            .addDisposableTo(disposeBag)
+        
         reloadButton.rx_tap
-            .subscribeNext({ [unowned self] in
-                self.data.get()
+            .subscribeNext { [unowned self] in
                 self.tableview.reloadData()
-            })
+            }
+            .addDisposableTo(disposeBag)
+        
+        viewModel.checkGet.asObservable()
+            .subscribeNext { [unowned self] in
+                self.reloadButton.enabled = $0
+            }
             .addDisposableTo(disposeBag)
     }
     
