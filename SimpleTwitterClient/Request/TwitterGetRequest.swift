@@ -15,23 +15,23 @@ import ObjectMapper
 
 final class TwitterGetRequest: NSObject {
     
-    let url = NSURL(string: "https://api.twitter.com/1.1/statuses/user_timeline.json")
-    let alert = AlertDialog()
-    let disposeBag = DisposeBag()
+    private let url = NSURL(string: "https://api.twitter.com/1.1/statuses/user_timeline.json")
+    private let alert = AlertDialog()
+    private let disposeBag = DisposeBag()
     
-    func request(account: ACAccount) -> Observable<[TwitterGetResponse]> {
+    func request() -> Observable<[TwitterGetResponse]> {
         
         let request = SLRequest(forServiceType: SLServiceTypeTwitter,
                                 requestMethod: .GET,
                                 URL: url,
                                 parameters: nil)
         
-        request.account = account
+        request.account = TwitterClient.myAccount.value
         
         return getResponse(request)
     }
     
-    func getResponse(request: SLRequest) -> Observable<[TwitterGetResponse]> {
+    private func getResponse(request: SLRequest) -> Observable<[TwitterGetResponse]> {
         var jsonArray = NSArray()
         return Observable.create { (response) in
             request.performRequestWithHandler { (responseData, urlResponse, error) -> Void in

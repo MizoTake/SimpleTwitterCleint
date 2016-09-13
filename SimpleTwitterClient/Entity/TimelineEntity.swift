@@ -10,7 +10,7 @@ import UIKit
 
 final class TimelineEntity: NSObject {
     
-    var tweetText = ""
+    private(set) var tweetText = ""
     
     func register(tweetText: String) {
         self.tweetText = tweetText

@@ -13,11 +13,11 @@ import Accounts
 import Social
 import ObjectMapper
 
-class TwitterPostRequest: NSObject {
+final class TwitterPostRequest: NSObject {
     
-    let alert = AlertDialog()
+    private let alert = AlertDialog()
     
-    func request(account: ACAccount, tweet: String) {
+    func request(tweet: String) {
         let URL = NSURL(string: "https://api.twitter.com/1.1/statuses/update.json")
         
         let params = ["status" : tweet]
@@ -27,7 +27,7 @@ class TwitterPostRequest: NSObject {
                                 URL: URL,
                                 parameters: params)
         
-        request.account = account
+        request.account = TwitterClient.myAccount.value
         
         request.performRequestWithHandler { (responseData, urlResponse, error) -> Void in
             if error != nil {

@@ -12,15 +12,15 @@ import RxCocoa
 
 class TimelineViewController: UITableViewController {
     
-    @IBOutlet var tableview: UITableView!
+    @IBOutlet private var tableview: UITableView!
     
-    @IBOutlet weak var reloadButton: UIBarButtonItem!
+    @IBOutlet private weak var reloadButton: UIBarButtonItem!
     
-    @IBOutlet weak var getButton: UIBarButtonItem!
+    @IBOutlet private weak var getButton: UIBarButtonItem!
     
-    let viewModel = TimelineViewModel()
+    private let viewModel = TimelineViewModel()
     
-    let disposeBag = DisposeBag()
+    private let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
         setup()
@@ -28,7 +28,7 @@ class TimelineViewController: UITableViewController {
         bind()
     }
     
-    func setup() {
+    private func setup() {
         tableview.dataSource = viewModel
         
         viewModel.setupTwitter()
@@ -37,7 +37,7 @@ class TimelineViewController: UITableViewController {
         tableView.estimatedRowHeight = 10000
     }
     
-    func bind() {
+    private func bind() {
         getButton.rx_tap
             .subscribeNext { [unowned self] in
                 self.viewModel.get()

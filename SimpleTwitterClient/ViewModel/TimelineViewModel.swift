@@ -14,13 +14,13 @@ final class TimelineViewModel: NSObject, UITableViewDataSource {
     
     var checkGet = Variable<Bool>(false)
     
-    var entity: [TimelineEntity] = []
+    private var entity: [TimelineEntity] = []
     
-    let getTimeline = TwitterGetRequest()
+    private let getTimeline = TwitterGetRequest()
     
-    let twitterInfo = TwitterClient()
+    private let twitterInfo = TwitterClient()
     
-    let disposeBag = DisposeBag()
+    private let disposeBag = DisposeBag()
     
     func setupTwitter() {
         twitterInfo.setup()
@@ -33,8 +33,8 @@ final class TimelineViewModel: NSObject, UITableViewDataSource {
         TwitterClient.myAccount.asObservable()
             .subscribeOn(SerialDispatchQueueScheduler(globalConcurrentQueueQOS: .Background))
             .filter{$0 != nil}
-            .subscribeNext { [unowned self] in
-                self.getTimeline.request($0!)
+            .subscribeNext { [unowned self] _ in
+                self.getTimeline.request()
                     .subscribeNext { [unowned self] in
                         $0.forEach {
                             self.entity.append(TimelineEntity())

@@ -9,16 +9,15 @@
 import UIKit
 import ObjectMapper
 
-class TwitterGetResponse: Mappable {
+final class TwitterGetResponse: Mappable {
     
-    var tweetText: String!
+    private(set) var tweetText: String!
     
     func mapping(map: Map) {
         tweetText <- map["text"]
     }
 
-    required init?(_ map: Map) {
-    }
+    required init?(_ map: Map) { }
     
     init() { }
     

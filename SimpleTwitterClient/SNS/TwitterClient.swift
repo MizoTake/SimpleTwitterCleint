@@ -16,7 +16,7 @@ final class TwitterClient: NSObject {
     
     private let alert = AlertDialog()
     
-    var accountStore = ACAccountStore()
+    private var accountStore = ACAccountStore()
     
     static var myAccount = Variable<ACAccount?>(nil)
     
@@ -44,7 +44,7 @@ final class TwitterClient: NSObject {
         }
     }
     
-    func selectAccount(accounts: [ACAccount]) {
+    private func selectAccount(accounts: [ACAccount]) {
         let accountNames = accountnames(accounts)
         var action = [{TwitterClient.myAccount.value = accounts[$0]}]
         for _ in 0..<accountNames.count - 1 {
@@ -54,7 +54,7 @@ final class TwitterClient: NSObject {
     }
     
     
-    func accountnames(accounts: [ACAccount]) -> [String] {
+    private func accountnames(accounts: [ACAccount]) -> [String] {
         var result = [String]()
         for account in accounts {
             result.append(account.username)
