@@ -42,6 +42,11 @@ final class AlertDialog: NSObject {
             alert.addAction(select)
         }
         
+        let cancel = UIAlertAction(title: "Cancel", style: .Cancel) { _ in
+            view.dismissViewControllerAnimated(true, completion: nil)
+        }
+        alert.addAction(cancel)
+        
         view.presentViewController(alert, animated: true, completion: nil)
     }
     

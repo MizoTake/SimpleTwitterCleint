@@ -56,7 +56,7 @@
             </objects>
             <point key="canvasLocation" x="905" y="265"/>
         </scene>
-        <!--Another User Timeline-->
+        <!--Home Timeline-->
         <scene sceneID="JHT-D5-ihP">
             <objects>
                 <tableViewController id="8QA-9w-lax" customClass="TimelineViewController" customModule="SimpleTwitterClient" customModuleProvider="target" sceneMemberID="viewController">
@@ -69,7 +69,7 @@
                                 <rect key="frame" x="0.0" y="92" width="600" height="150"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mp8-D1-g5z" id="Gam-e3-uLK">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="150"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="149.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uHt-M6-cgE">
@@ -124,19 +124,24 @@
                             <outlet property="delegate" destination="8QA-9w-lax" id="BnP-H1-AO9"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Another User Timeline" id="3xM-UM-4OB">
+                    <navigationItem key="navigationItem" title="Home Timeline" id="3xM-UM-4OB">
                         <leftBarButtonItems>
                             <barButtonItem title="Get" id="b6l-0s-9bQ"/>
                             <barButtonItem title="Reload" id="E7i-ye-YsR"/>
                         </leftBarButtonItems>
-                        <barButtonItem key="rightBarButtonItem" title="SendPage" id="1NK-m6-K11" userLabel="Send">
-                            <connections>
-                                <segue destination="BYZ-38-t0r" kind="modal" id="RF8-dq-Hkk"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem title="SendPage" id="1NK-m6-K11" userLabel="Send">
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="modal" id="RF8-dq-Hkk"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Account" id="M45-O2-hGR" userLabel="Account"/>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
+                        <outlet property="accountButton" destination="M45-O2-hGR" id="cAj-Ur-QqV"/>
                         <outlet property="getButton" destination="b6l-0s-9bQ" id="hAH-Af-hR7"/>
+                        <outlet property="nextPostPageButton" destination="1NK-m6-K11" id="CaC-6u-naD"/>
                         <outlet property="reloadButton" destination="E7i-ye-YsR" id="Mn6-S7-4RA"/>
                         <outlet property="tableview" destination="7Jc-CU-K6l" id="KBD-ok-zk8"/>
                     </connections>

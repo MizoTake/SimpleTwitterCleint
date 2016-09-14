@@ -18,6 +18,10 @@ class TimelineViewController: UITableViewController {
     
     @IBOutlet private weak var getButton: UIBarButtonItem!
     
+    @IBOutlet private weak var nextPostPageButton: UIBarButtonItem!
+    
+    @IBOutlet private weak var accountButton: UIBarButtonItem!
+    
     private let viewModel = TimelineViewModel()
     
     private let disposeBag = DisposeBag()
@@ -50,9 +54,24 @@ class TimelineViewController: UITableViewController {
             }
             .addDisposableTo(disposeBag)
         
+        accountButton.rx_tap
+            .subscribeNext { [unowned self] in
+                self.viewModel.setupTwitter()
+            }
+            .addDisposableTo(disposeBag)
+        
         viewModel.checkGet.asObservable()
             .subscribeNext { [unowned self] in
                 self.reloadButton.enabled = $0
+            }
+            .addDisposableTo(disposeBag)
+        
+        TwitterClient.myAccount.asObservable()
+            .map{ $0 != nil }
+            .subscribeNext{ [unowned self] in
+                self.getButton.enabled = $0
+                self.reloadButton.enabled = $0
+                self.nextPostPageButton.enabled = $0
             }
             .addDisposableTo(disposeBag)
     }

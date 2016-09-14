@@ -30,20 +30,15 @@ final class TimelineViewModel: NSObject, UITableViewDataSource {
         checkGet.value = false
         entity = []
         
-        TwitterClient.myAccount.asObservable()
+        self.getTimeline.request()
             .subscribeOn(SerialDispatchQueueScheduler(globalConcurrentQueueQOS: .Background))
-            .filter{$0 != nil}
-            .subscribeNext { [unowned self] _ in
-                self.getTimeline.request()
-                    .subscribeNext { [unowned self] in
-                        $0.forEach {
-                            self.entity.append(TimelineEntity())
-                            self.entity[self.entity.endIndex - 1].register($0.tweetText, userName: $0.userName)
-                        }
-                    }
-                    .addDisposableTo(self.disposeBag)
+            .subscribeNext { [unowned self] in
+                $0.forEach {
+                    self.entity.append(TimelineEntity())
+                    self.entity[self.entity.endIndex - 1].register($0.tweetText, userName: $0.userName)
+                }
             }
-            .addDisposableTo(disposeBag)
+            .addDisposableTo(self.disposeBag)
         self.checkGet.value = true
     }
     
