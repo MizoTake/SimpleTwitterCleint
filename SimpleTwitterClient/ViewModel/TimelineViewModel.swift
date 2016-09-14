@@ -37,9 +37,9 @@ final class TimelineViewModel: NSObject, UITableViewDataSource {
                     self.entity.append(TimelineEntity())
                     self.entity[self.entity.endIndex - 1].register($0.tweetText, userName: $0.userName)
                 }
+                self.checkGet.value = true
             }
             .addDisposableTo(self.disposeBag)
-        self.checkGet.value = true
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

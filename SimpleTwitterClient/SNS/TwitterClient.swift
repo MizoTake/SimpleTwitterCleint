@@ -25,18 +25,18 @@ final class TwitterClient: NSObject {
         accountStore.requestAccessToAccountsWithType(accountType, options: nil) { (granted:Bool, error:NSError?) -> Void in
             
             if error != nil {
-                self.alert.showAlert("Error", alertMessage: "\(error)", buttonTitle: ["OK"], buttonAction: [{self.alert.openSetting()}])
+                self.alert.showAlert("Error", alertMessage: "\(error)", buttonTitle: ["OK"], buttonAction: [{self.alert.openTwitterSetting()}])
                 return
             }
             
             if !granted {
-                self.alert.showAlert("Error", alertMessage: "TwitterAccountの許可がありません", buttonTitle: ["OK"], buttonAction: [{self.alert.openSetting()}])
+                self.alert.showAlert("Error", alertMessage: "TwitterAccountの許可がありません", buttonTitle: ["OK"], buttonAction: [{self.alert.openTwitterSetting()}])
                 return
             }
             
             let accounts = self.accountStore.accountsWithAccountType(accountType) as! [ACAccount]
             if accounts.count == 0 {
-                self.alert.showAlert("Error", alertMessage: "設定画面からアカウントを設定してください", buttonTitle: ["OK"], buttonAction: [{self.alert.openSetting()}])
+                self.alert.showAlert("Error", alertMessage: "設定画面からアカウントを設定してください", buttonTitle: ["OK"], buttonAction: [{self.alert.openTwitterSetting()}])
                 return
             }
             

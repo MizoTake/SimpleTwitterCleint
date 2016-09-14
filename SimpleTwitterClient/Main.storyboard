@@ -75,18 +75,18 @@
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uHt-M6-cgE">
                                             <rect key="frame" x="8" y="8" width="584" height="134"/>
                                             <subviews>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Tweet" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pLZ-ys-1T2">
+                                                    <rect key="frame" x="8" y="37" width="568" height="89"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="UserName" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PSS-sL-Tid">
                                                     <rect key="frame" x="8" y="8" width="568" height="28"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="28" id="d78-WK-irN"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                                </textView>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Tweet" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pLZ-ys-1T2">
-                                                    <rect key="frame" x="8" y="37" width="568" height="89"/>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                 </textView>
@@ -130,7 +130,7 @@
                             <barButtonItem title="Reload" id="E7i-ye-YsR"/>
                         </leftBarButtonItems>
                         <rightBarButtonItems>
-                            <barButtonItem title="SendPage" id="1NK-m6-K11" userLabel="Send">
+                            <barButtonItem title="Tweet" id="1NK-m6-K11" userLabel="Send">
                                 <connections>
                                     <segue destination="BYZ-38-t0r" kind="modal" id="RF8-dq-Hkk"/>
                                 </connections>

@@ -56,4 +56,10 @@ final class AlertDialog: NSObject {
         }
     }
     
+    func openTwitterSetting() {
+        if let url = NSURL(string: "prefs:root=TWITTER") {
+            UIApplication.sharedApplication().openURL(url)
+        }
+    }
+    
 }
